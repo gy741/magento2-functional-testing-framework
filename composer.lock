@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d733d1bb277b1397e891340fed0877a2",
+    "content-hash": "1479442c6433133c30f4995090721ff9",
     "packages": [
         {
             "name": "allure-framework/allure-codeception",
@@ -111,16 +111,16 @@
         },
         {
             "name": "behat/gherkin",
-            "version": "v4.4.5",
+            "version": "v4.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Gherkin.git",
-                "reference": "5c14cff4f955b17d20d088dec1bde61c0539ec74"
+                "reference": "74ac03d52c5e23ad8abd5c5cce4ab0e8dc1b530a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/5c14cff4f955b17d20d088dec1bde61c0539ec74",
-                "reference": "5c14cff4f955b17d20d088dec1bde61c0539ec74",
+                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/74ac03d52c5e23ad8abd5c5cce4ab0e8dc1b530a",
+                "reference": "74ac03d52c5e23ad8abd5c5cce4ab0e8dc1b530a",
                 "shasum": ""
             },
             "require": {
@@ -166,35 +166,32 @@
                 "gherkin",
                 "parser"
             ],
-            "time": "2016-10-30T11:50:56+00:00"
+            "time": "2017-08-30T11:04:43+00:00"
         },
         {
             "name": "codeception/codeception",
-            "version": "2.3.9",
+            "version": "2.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "104f46fa0bde339f1bcc3a375aac21eb36e65a1e"
+                "reference": "5fee32d5c82791548931cbc34806b4de6aa1abfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/104f46fa0bde339f1bcc3a375aac21eb36e65a1e",
-                "reference": "104f46fa0bde339f1bcc3a375aac21eb36e65a1e",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/5fee32d5c82791548931cbc34806b4de6aa1abfc",
+                "reference": "5fee32d5c82791548931cbc34806b4de6aa1abfc",
                 "shasum": ""
             },
             "require": {
-                "behat/gherkin": "~4.4.0",
-                "codeception/stub": "^1.0",
+                "behat/gherkin": "^4.4.0",
+                "codeception/phpunit-wrapper": "^6.0.9|^7.0.6",
+                "codeception/stub": "^2.0",
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "facebook/webdriver": ">=1.1.3 <2.0",
                 "guzzlehttp/guzzle": ">=4.1.4 <7.0",
                 "guzzlehttp/psr7": "~1.0",
-                "php": ">=5.4.0 <8.0",
-                "phpunit/php-code-coverage": ">=2.2.4 <6.0",
-                "phpunit/phpunit": ">=4.8.28 <5.0.0 || >=5.6.3 <7.0",
-                "sebastian/comparator": ">1.1 <3.0",
-                "sebastian/diff": ">=1.4 <3.0",
+                "php": ">=5.6.0 <8.0",
                 "symfony/browser-kit": ">=2.7 <5.0",
                 "symfony/console": ">=2.7 <5.0",
                 "symfony/css-selector": ">=2.7 <5.0",
@@ -260,26 +257,69 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2018-02-26T23:29:41+00:00"
+            "time": "2018-08-01T07:21:49+00:00"
         },
         {
-            "name": "codeception/stub",
-            "version": "1.0.4",
+            "name": "codeception/phpunit-wrapper",
+            "version": "6.0.12",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Codeception/Stub.git",
-                "reference": "681b62348837a5ef07d10d8a226f5bc358cc8805"
+                "url": "https://github.com/Codeception/phpunit-wrapper.git",
+                "reference": "de922c760dfddf8a33c4a066efcd0cd93576d957"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Stub/zipball/681b62348837a5ef07d10d8a226f5bc358cc8805",
-                "reference": "681b62348837a5ef07d10d8a226f5bc358cc8805",
+                "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/de922c760dfddf8a33c4a066efcd0cd93576d957",
+                "reference": "de922c760dfddf8a33c4a066efcd0cd93576d957",
                 "shasum": ""
             },
             "require": {
-                "phpunit/phpunit-mock-objects": ">2.3 <7.0"
+                "phpunit/php-code-coverage": ">=4.0.4 <6.0",
+                "phpunit/phpunit": ">=5.7.27 <7.0",
+                "sebastian/comparator": ">=1.2.4 <3.0",
+                "sebastian/diff": ">=1.4 <4.0"
+            },
+            "replace": {
+                "codeception/phpunit-wrapper": "*"
             },
             "require-dev": {
+                "codeception/specify": "*",
+                "vlucas/phpdotenv": "^2.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Codeception\\PHPUnit\\": "src\\"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Davert",
+                    "email": "davert.php@resend.cc"
+                }
+            ],
+            "description": "PHPUnit classes used by Codeception",
+            "time": "2018-09-12T20:19:47+00:00"
+        },
+        {
+            "name": "codeception/stub",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Codeception/Stub.git",
+                "reference": "f50bc271f392a2836ff80690ce0c058efe1ae03e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Codeception/Stub/zipball/f50bc271f392a2836ff80690ce0c058efe1ae03e",
+                "reference": "f50bc271f392a2836ff80690ce0c058efe1ae03e",
+                "shasum": ""
+            },
+            "require": {
                 "phpunit/phpunit": ">=4.8 <8.0"
             },
             "type": "library",
@@ -293,7 +333,7 @@
                 "MIT"
             ],
             "description": "Flexible Stub wrapper for PHPUnit's Mock Builder",
-            "time": "2018-05-17T09:31:08+00:00"
+            "time": "2018-07-26T11:55:37+00:00"
         },
         {
             "name": "consolidation/annotated-command",
@@ -452,19 +492,20 @@
         },
         {
             "name": "consolidation/output-formatters",
-            "version": "3.2.1",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/output-formatters.git",
-                "reference": "d78ef59aea19d3e2e5a23f90a055155ee78a0ad5"
+                "reference": "853d2d462a191d44a25a5593d8fe2c4a1e59e382"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/d78ef59aea19d3e2e5a23f90a055155ee78a0ad5",
-                "reference": "d78ef59aea19d3e2e5a23f90a055155ee78a0ad5",
+                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/853d2d462a191d44a25a5593d8fe2c4a1e59e382",
+                "reference": "853d2d462a191d44a25a5593d8fe2c4a1e59e382",
                 "shasum": ""
             },
             "require": {
+                "dflydev/dot-access-data": "^1.1.0",
                 "php": ">=5.4.0",
                 "symfony/console": "^2.8|^3|^4",
                 "symfony/finder": "^2.5|^3|^4"
@@ -503,7 +544,7 @@
                 }
             ],
             "description": "Format text by applying transformations provided by plug-in formatters.",
-            "time": "2018-05-25T18:02:34+00:00"
+            "time": "2018-10-16T01:14:51+00:00"
         },
         {
             "name": "consolidation/robo",
@@ -4606,16 +4647,16 @@
         },
         {
             "name": "codeception/aspect-mock",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/AspectMock.git",
-                "reference": "061386697d2f47c4d3c695e28ee23a68a2383199"
+                "reference": "130afd10a3d8131d267f393ee1ec322e3e583d67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/AspectMock/zipball/061386697d2f47c4d3c695e28ee23a68a2383199",
-                "reference": "061386697d2f47c4d3c695e28ee23a68a2383199",
+                "url": "https://api.github.com/repos/Codeception/AspectMock/zipball/130afd10a3d8131d267f393ee1ec322e3e583d67",
+                "reference": "130afd10a3d8131d267f393ee1ec322e3e583d67",
                 "shasum": ""
             },
             "require": {
@@ -4646,7 +4687,7 @@
                 }
             ],
             "description": "Experimental Mocking Framework powered by Aspects",
-            "time": "2018-07-31T20:44:39+00:00"
+            "time": "2018-10-07T16:21:11+00:00"
         },
         {
             "name": "doctrine/cache",
