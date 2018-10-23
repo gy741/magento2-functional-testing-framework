@@ -600,17 +600,11 @@ class MagentoWebDriver extends WebDriver
             $snodes = $this->matchFirstOrFail($this->baseElement, $source);
             $tnodes = $this->matchFirstOrFail($this->baseElement, $target);
 
-            $targetX = intval($tnodes->getLocation()->getX() + $xOffset);
-            $targetY = intval($tnodes->getLocation()->getY() + $yOffset);
-
-            $travelX = intval($targetX - $snodes->getLocation()->getX());
-            $travelY = intval($targetY - $snodes->getLocation()->getY());
+            $travelX = intval($tnodes->getLocation()->getX() - $snodes->getLocation()->getX() + $xOffset);
+            $travelY = intval($tnodes->getLocation()->getY() - $snodes->getLocation()->getY() + $yOffset);
 
             $action = new WebDriverActions($this->webDriver);
-            $action->moveToElement($snodes)->perform();
-            $action->clickAndHold($snodes)->perform();
-            $action->moveByOffset($travelX, $travelY)->perform();
-            $action->release()->perform();
+            $action->dragAndDropBy($snodes, $travelX, $travelY)->perform();
         } else {
             parent::dragAndDrop($source, $target);
         }
